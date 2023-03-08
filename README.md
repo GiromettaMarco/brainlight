@@ -118,6 +118,7 @@ The ```:``` character causes the content of the attribute to be evaluated as a v
 
 ```
 {{>partial :name="firstName"}}
+```
 
 ## Extension and Slots
 
