@@ -32,6 +32,7 @@ Brainlight is designed to be implemented with multiple languages while keeping t
 - [Extension and Slots](#extension-and-slots)
 - [Passing Variables](#passing-variables)
 - [Advanced Inclusions and extensions](#advanced-inclusions-and-extensions)
+- [Comments](#comments)
 
 ## General rules
 
@@ -194,6 +195,14 @@ Passes a variable directly the same way as:
 ```
 
 When the language supports it, templates can be referenced with additional logic using the ```{{>+}}``` (advanced inclusion) and ```{{&+}}``` (advanced extension) tags.
+
+## Comments
+
+```
+{{- My comment goes here}}
+```
+
+Comment tags are ignored at compile time and replaced by an empty string.
 
 ## License
 
