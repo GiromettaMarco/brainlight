@@ -35,9 +35,9 @@ Brainlight is designed to be implemented with multiple languages while keeping t
 
 ## General rules
 
-Brainlight is has a tag based syntax. Tags are delimited by double curly brackets: ```{{tag}}}```
+Brainlight has a tag based syntax. Tags are delimited by double curly brackets: ```{{tag}}}```
 
-In most cases, tag can be expressed with of without spaces: ```{{ tag }}}```
+In most cases, tag can be expressed with or without spaces: ```{{ tag }}}```
 
 The suggested file extension for templates is ```.brain```
 
@@ -61,7 +61,7 @@ To print a value without escaping:
 {{book>genre>name}}
 ```
 
-To access variables inside a context use the ```>``` symbol. A context could be an object or an associative array according to the language.
+To access variables inside a context use the ```>``` symbol. A context could be an object or an associative array according to the language rules.
 
 Contextual access can be used every time a tag makes reference to a variable.
 
@@ -112,7 +112,7 @@ When a loop tag contains an ```@``` clause, it is considered to be a foreach loo
 
 The first argument must be an array or an iterable object, according to the language practice. The content between tags gets printed N number of times, where N is the array size.
 
-The ```@``` clause could be expressed in the form of ```@ value``` or ```@ key>value```, which makes the value or key and value of the current array element accessible inside the loop.
+The ```@``` clause could be expressed in form of ```@ value``` or ```@ key>value```, which makes the value or key and value of the current array element accessible inside the loop.
 
 Foreach loops must be closed with the ```{{/#}}``` tag.
 
@@ -122,7 +122,7 @@ Foreach loops must be closed with the ```{{/#}}``` tag.
 {{>partial}}
 ```
 
-The inclusion tag includes the contents of another template inside the current one.
+The inclusion tag includes contents of another template inside the current one.
 
 The included template is identified by its name and dot notation can be used to access templates in sub directories:
 
@@ -141,7 +141,7 @@ The included template is identified by its name and dot notation can be used to 
 
 The extension tag ```{{&parent}}``` sets up a template extension. This tag identifies a template the same way as the inclusion tag.
 
-The slot tag ```{{$slot}}``` creates a new variable with the content between tags as its value. This variable can be accessed by the extended template.
+The slot tag ```{{$slot}}``` creates a new variable with the content between tags as its value. This variable can be accessed by the extended template. A child template may have multiple slots.
 
 parent.brain:
 ```
@@ -178,7 +178,7 @@ While performing an inclusion or an extension, variables can be passed with an H
 {{>partial :name}}
 ```
 
-Passes a variable directly at the same way as:
+Passes a variable directly the same way as:
 
 ```
 {{>partial :name=name}}
