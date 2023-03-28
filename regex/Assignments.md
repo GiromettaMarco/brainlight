@@ -11,10 +11,10 @@ Tokens:
 /^([a-zA-Z0-9_]+)="([^"]*)"$/
 ```
 
-## Bool and Int
+## Bool and Numb
 
 ```
-/^([a-zA-Z0-9_]+)=([0-9]*|true|false)$/
+/^([a-zA-Z0-9_]+)=([0-9.]*|true|false)$/
 ```
 
 ## Variable
