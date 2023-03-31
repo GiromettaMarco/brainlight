@@ -42,6 +42,17 @@ In most cases, tag can be expressed with or without spaces: ```{{ tag }}}```
 
 The suggested file extension for templates is ```.brain```
 
+Charachers allowed to reference variable names are:
+
+- Alphanumericals (```A–Z```, ```a–z``` and ```0–9```)
+- Underscore (```_```)
+
+Charachers allowed to reference template names are:
+
+- Alphanumericals (```A–Z```, ```a–z``` and ```0–9```)
+- Underscore (```_```)
+- Hyphen (```-```)
+
 ## Printing variables
 
 ```
@@ -50,11 +61,13 @@ The suggested file extension for templates is ```.brain```
 
 The escaped variable tag parses a variable by converting special characters to HTML entities, than prints the result.
 
-To print a value without escaping:
+The unescaped variable tag prints a value without escaping:
 
 ```
 {{!name}}
 ```
+
+Printing a boolean causes them to be converted to a string representing their value: ```'true'``` or ```'false'```.
 
 ## Contextual variables
 
